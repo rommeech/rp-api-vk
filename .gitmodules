@@ -1,6 +1,3 @@
 [submodule "lib/vk-api-schema"]
 	path = lib/vk-api-schema
 	url = https://github.com/VKCOM/vk-api-schema.git
-[submodule "rp-api"]
-	path = rp-api
-	url = git@github.com:rommeech/rp-api.git

@@ -3,7 +3,6 @@ package RP::API::VK;
 use utf8;
 use strict;
 use warnings;
-use base qw/RP::API/;
 use Encode qw/decode encode/;
 use File::Spec::Functions qw/catfile catdir tmpdir/;
 use Digest::MD5 qw/md5_hex/;
@@ -51,8 +50,13 @@ sub _get_api_method_cfg
 	unless ($api_inited)
 	{
 
-		my $json_dir  = catdir(dirname(abs_path($0)), '../../vk-api-schema/');
-		my $json_file = catfile($json_dir, 'methods.json');
+		#my $json_dir  = dirname(abs_path(__FILE__));
+		#$json_dir = catdir(, '../../vk-api-schema/');
+		#my $json_file = catfile($json_dir, 'methods.json');
+
+		my $json_file = 'vk-api-schema/methods.json';
+
+printf("%s - %s\n", $json_file, -e $json_file);
 
 		$api_inited = 1;
 
